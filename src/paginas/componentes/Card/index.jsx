@@ -6,7 +6,7 @@ const Card = (props) => {
     <p>
       {props.nome} - <strong>{props.preco}</strong>
     </p>
-    <Link to={`/${props.url}/${props.id}`}>Ver detalhes</Link>
+    <Link className="link" to={`/${props.url}/${props.id}`}>Ver detalhes</Link>
   </div>
 }
 

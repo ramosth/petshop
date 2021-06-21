@@ -25,7 +25,7 @@ const Servico = () => {
 
   return (<div>
     <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo} />
-      <CardServico nome={servico.nome} preco={servico.preco} descricao={servico.descricao} url={'servico'}
+      <CardServico nome={servico.nome} preco={servico.preco} descricao={servico.descricao} url={'servicos'}
       />
   </div>
 
