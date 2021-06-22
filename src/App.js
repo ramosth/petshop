@@ -8,9 +8,12 @@ import Navbar from './paginas/componentes/Navbar';
 import Pagina404 from './paginas/pagina404'
 import Produto from './paginas/Produto'
 import Servico from './paginas/Servico'
+import Login from './paginas/Login';
+import Cadastro from './paginas/Cadastro';
 
 function App() {
 
+  // json-server --watch db-petshop.json -p 8000
   const menu = [
     {
       titulo: 'Inicio',
@@ -23,6 +26,14 @@ function App() {
     {
       titulo: 'Servicos',
       link: '/servicos'
+    },
+    {
+      titulo: 'Cadastre-se',
+      link: '/cadastro'
+    },
+    {
+      titulo: 'Login',
+      link: '/login'
     },
   ];
 
@@ -45,6 +56,12 @@ function App() {
           </Route>
           <Route path="/servicos/:id">
             <Servico />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/cadastro">
+            <Cadastro />
           </Route>
           <Route>
             <Pagina404 />

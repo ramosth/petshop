@@ -2,7 +2,8 @@ import CardProduto from './componentes/CardProduto';
 import Logo from './componentes/logo';
 import imagemLogo from './home/logo_petshop.png';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import http from '../paginas/http'
 import { useParams } from 'react-router-dom';
 
 const Produto = () => {
@@ -17,7 +18,7 @@ const Produto = () => {
   const [produto, setProduto] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/produtos/'+id)
+    http.get('produtos/'+id)
       .then(response => {
         setProduto(response.data);
       }).catch(erro => console.log(erro))

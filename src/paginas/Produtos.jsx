@@ -2,7 +2,8 @@ import Card from './componentes/Card';
 import Logo from './componentes/logo';
 import imagemLogo from './home/logo_petshop.png';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import http from '../paginas/http'
 
 const Produtos = () => {
 
@@ -15,7 +16,7 @@ const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
 
   const obterProdutos = () => {
-    axios.get('http://localhost:8000/produtos')
+    http.get('produtos')
       .then(response => {
         setProdutos(response.data);
       }).catch(erro => console.log(erro))

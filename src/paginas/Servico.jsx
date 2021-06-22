@@ -2,7 +2,8 @@ import CardServico from './componentes/CardServico';
 import Logo from './componentes/logo';
 import imagemLogo from './home/logo_petshop.png';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import http from '../paginas/http'
 import { useParams } from 'react-router-dom';
 
 const Servico = () => {
@@ -17,7 +18,7 @@ const Servico = () => {
   const [servico, setServico] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/servicos/'+id)
+    http.get('servicos/'+id)
       .then(response => {
         setServico(response.data);
       }).catch(erro => console.log(erro))
